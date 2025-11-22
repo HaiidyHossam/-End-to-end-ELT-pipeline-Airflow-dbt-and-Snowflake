@@ -7,7 +7,6 @@ This project demonstrates a complete **End-to-End ELT pipeline** using:
 - **Airflow** (Orchestration)
 - **dbt** (Transformations & Modeling)
 - **Snowflake** (Data Warehouse)
-- **Docker** (Full Environment Setup)
 
 The goal is to simulate a **real production-grade workflow** followed by Data Engineers.
 
@@ -51,5 +50,5 @@ Example screenshot of dbt running:
 
 ---
 
-## 🧱 Folder Structure
+
 
