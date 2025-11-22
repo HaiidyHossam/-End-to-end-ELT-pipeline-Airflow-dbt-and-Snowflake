@@ -1,15 +1,55 @@
-Welcome to your new dbt project!
+# End-to-End ELT Pipeline using Airflow, dbt, and Snowflake
 
-### Using the starter project
+![Pipeline](screens%20of%20work/pipeline.png)
 
-Try running the following commands:
-- dbt run
-- dbt test
+This project demonstrates a complete **End-to-End ELT pipeline** using:
 
+- **Airflow** (Orchestration)
+- **dbt** (Transformations & Modeling)
+- **Snowflake** (Data Warehouse)
+- **Docker** (Full Environment Setup)
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+The goal is to simulate a **real production-grade workflow** followed by Data Engineers.
+
+---
+
+## 🚀 Project Overview
+
+The pipeline follows a clean ELT structure:
+
+1. **Extract**: Raw data loaded into Snowflake (manually or via scripts).
+2. **Load**: Data is ingested into Snowflake staging layers.
+3. **Transform**: dbt applies business logic → staging → intermediate → marts.
+4. **Orchestrate**: Airflow triggers `dbt run` and `dbt test`.
+
+---
+
+## ❄️ Snowflake Setup
+
+Screenshots from Snowflake during the setup and loading phase:
+
+![Snowflake](screens%20of%20work/snowflake.png)
+
+---
+
+## 📦 dbt Project
+
+Your dbt project includes:
+
+- `models/`
+- `tests/`
+- `snapshots/`
+- `macros/`
+
+Example screenshot of dbt running:
+
+![dbt](screens%20of%20work/dbt.png)
+
+### 📊 dbt Lineage Graph
+
+![Lineage](screens%20of%20work/lineage_graph.png)
+
+---
+
+## 🧱 Folder Structure
+
